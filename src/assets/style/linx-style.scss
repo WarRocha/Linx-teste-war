@@ -1,0 +1,484 @@
+@charset 'UTF-8';
+@import './_configs/__config';
+@import './linx-sprite';
+
+html {
+    font-family: $font-family;
+
+    body {
+        .--block{
+            width: 100%;
+            max-width: 930px;
+            margin: 0 auto;
+
+            @include breakpoint('mobile') {
+                max-width: unset;
+            }
+        }
+
+        .linx-header{
+            overflow: hidden;
+
+            &__content {
+                position: relative;
+                background-color: #707070;
+                top: -67px;
+                width: 100%;
+                height: 399px;
+                transform: skew(0deg, 6deg) translate(0px);
+
+                @include breakpoint('mobile') {
+                    height: 440px;
+                }
+            }    
+
+            &__heading {
+                text-align: center;
+                color: #FFFFFF;
+                transform: skew(0deg, -6deg);
+
+                @include breakpoint('mobile') {
+                    text-align: left;
+                    padding-left: 16px;
+                }
+
+                h1 {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 138px;
+    
+                    @include breakpoint('mobile') {
+                        text-align: left;
+                    }
+
+                    strong {
+                        font-size: 40px;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    padding-top: 24px;
+                }
+            }
+
+            &__nav {
+                margin: auto;
+                padding-top: 50px;
+                transform: skew(0deg, -6deg);
+                width: 72%;
+
+                @include breakpoint('mobile') {
+                    width: 100%;
+                    padding: 56px 20px 0px;
+                }
+
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #888888;
+
+                    @include breakpoint('mobile') {
+                        flex-wrap: wrap;
+                    }
+
+                    li {
+                        text-decoration: none;
+                        text-align: center;
+                        background-color: #fff;
+                        box-shadow: 0px 1px 6px #00000029;
+                        padding: 12px 0px;
+                        height: 40px;
+                        width: 21%;
+                        border-radius: 4px;
+
+                        @include breakpoint('mobile') {
+                            margin: 0 0px 20px 0px;
+                            width: 43%;
+                        }
+
+                        a {
+                            font-size: 14px;
+                            color: #888888;
+                        }
+                    }
+                }
+            }
+        }
+
+        .linx-main {
+            .linx-information {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+
+                @include breakpoint('mobile') {
+                    flex-wrap: wrap;
+                    margin: 0 10px;
+                }
+
+                &__text {
+                    width: 56%;
+                    color: #888888;
+                    font-family: Helvetica Neue;
+                    margin-right: 4%;
+
+                    h3 {
+                        font-size: 20px;
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+                        line-height: 18px;
+                        font-size: 12px;
+                    }
+
+                    @include breakpoint('mobile') {
+                        margin: 0px;
+                        width: 100%;
+                    }
+                }
+
+                &__form {
+                    width: 40%;
+
+                    @include breakpoint('mobile') {
+                        width: 100%;
+                        margin-top: 30px;
+                    }
+
+                    form {
+                        display: flex;
+                        flex-direction: column;
+
+                        label {
+                            text-align: left;
+                            letter-spacing: 0;
+                            color: #888888;
+                            font-size: 12px;
+                            margin: 20px 0 12px;
+
+                            &:first-child {
+                                margin: 0 0 12px;
+                            }
+                        }
+
+                        >input {
+                            border: 1px solid #707070;
+                            color: #cac7c7;
+                            padding: 5px;
+                            width: 340px;
+                            height: 30px;
+                            font-size: 14px;
+                            margin-top: 7px;
+
+                            @include breakpoint('mobile') {
+                                width: 100%;
+                            }
+                        }
+
+                        >div {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 20px 0 0px;
+                            width: 203px;
+
+                            div {
+                                label {
+                                    color: #888888;
+                                    font-size: 12px;
+                                }
+
+                                input {
+                                    margin-right: 5px;
+
+                                }
+                            }
+                        }
+                    }
+
+                    button {
+                        cursor: pointer;
+                        border: 1px solid #707070;
+                        margin-top: 23px;
+                        width: 340px;
+                        height: 39px;
+                        border-radius: 4px;
+                        font-size: 16px;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #888888;
+
+                        @include breakpoint('mobile') {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .linx-products {
+                height: auto;
+
+                h2 {
+                    text-align: center;
+                    color: #888888;
+                    font-size: 18px;
+                    margin: 79px 0px 50px;
+
+                    &::before,
+                    &::after {
+                        display: inline-block;
+                        vertical-align: middle;
+                        content: "";
+                        width: 37%;
+                        margin: 0 17px;
+                        height: 2px;
+                        background-color: #707070;
+
+                        @include breakpoint('mobile') {
+                            width: 21%;
+                            margin: 0 2px;
+                        }
+                    }
+                }
+
+                &__content {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &__list{
+                    width: 100%;
+
+                    .linx-product {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        color: #888888;
+                        width: 22%;
+                        height: auto;
+                        
+    
+                        @include breakpoint('mobile') {
+                            flex-direction: row;
+                            width: 100%;
+                            
+                        }
+    
+                        &__image {
+                            border: 1px solid #707070;
+                            width: 98%;
+                            height: auto;
+    
+                            @include breakpoint('mobile') {
+                                width: 80%;
+                                height: auto;
+                                margin: 0 23px 0px 10px;
+                            }
+                            img{
+                                width: 100%;
+                            }
+                        }
+    
+                        &__information {
+                            line-height: 27px;
+                            display: flex;
+                            flex-direction: column;
+
+                            @include breakpoint('mobile') {
+                                width: 46%;
+                                padding-right: 5%;
+                                justify-content: space-between;
+                            }
+    
+                            h4 {
+                                font-size: 14px;
+                                @include breakpoint('mobile') {
+                                line-height: normal;
+                            }
+                            }
+    
+                            p {
+                                font-size: 12px;
+                                line-height: 15px;                            
+    
+                                @include breakpoint('mobile') {
+                                    display: none;
+                                }
+                            }
+    
+                            span {
+                                font-size: 12px;
+                            }
+    
+                            strong {
+                                font-size: 16px;
+                                font-weight: bold;
+                            }
+    
+                            button {
+                                cursor: pointer;
+                                text-align: center;
+                                text-decoration: none;
+                                border: 1px solid #707070;
+                                color: #888888;
+                                width: 100%;
+                                height: 30px;
+                                border-radius: 4px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                &__more-products {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 50px;
+
+                    button {
+                        cursor: pointer;
+                        border: 1px solid #707070;
+                        width: 28%;
+                        height: 39px;
+                        border-radius: 4px;
+                        font-size: 16px;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #888888;
+
+                        @include breakpoint('mobile') {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+
+            .linx-newsletter {
+                width: 100%;
+                text-align: center;
+                color: #888888;
+
+                h2 {
+                    font-size: 18px;
+                    margin: 79px 0px 34px;
+
+                    &::before,
+                    &::after {
+                        display: inline-block;
+                        vertical-align: middle;
+                        content: "";
+                        width: 35%;
+                        margin: 0 17px;
+                        height: 2px;
+                        background-color: #707070;
+
+                        @include breakpoint('mobile') {
+                            width: 20%;
+                            margin: 0px 2px;
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    margin-bottom: 39px;
+                    line-height: 1.2;
+                }
+
+                &__form {
+                    form{
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;           
+                        @include breakpoint('mobile') {
+                            margin: 0 10px;
+                            display: block;
+                        }
+                        
+                        
+                        div{
+                            width: 37%;
+                            text-align: left;
+                            @include breakpoint('mobile') {
+                           width: 100%;
+                            }
+    
+                            &:first-child {
+                                margin-right: 30px;
+                                @include breakpoint('mobile') {
+                                   margin: 0;
+                                   padding-bottom: 20px;
+                                     }
+                            }
+
+                            label {
+                                font-size: 12px;
+                                margin-bottom: 7px;
+                            }
+    
+                            input {
+                                border: 1px solid #707070;
+                                width: 100%;
+                                height: 30px;
+                                line-height: 30px;
+                                font-size: 14px;
+                                margin-top: 7px;
+                                padding-left: 5px;
+                                @include breakpoint('mobile') {
+                                    width: 100%;
+                                     }
+                            }
+                        }
+
+                    }
+
+                    button {
+                        cursor: pointer;
+                        margin-top: 50px;
+                        margin-bottom: 70px;
+                        border: 1px solid #707070;
+                        width: 28%;
+                        height: 39px;
+                        border-radius: 4px;
+                        font-size: 16px;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #888888;
+                        @include breakpoint('mobile') {
+                            width: 66%;
+                            margin-top: 40px;
+
+                             }
+                    }
+                }
+            }
+        }
+
+        .linx-footer {
+            overflow: hidden;
+
+            &__content {
+                position: relative;
+                background-color: #707070;
+                bottom: -85px;
+                padding-top: 110px;
+                width: 100%;
+                height: 293px;
+                transform: skew(0deg, -9deg) translate(0px);
+
+
+                P {
+                    text-align: center;
+                    color: #FFFFFF;
+                    transform: skew(0deg, 9deg);
+                    font-size: 12px;
+                }
+                @include breakpoint('mobile') {
+                padding-top: 60px;
+            }
+            }
+        }
+    }
+}

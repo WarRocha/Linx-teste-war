@@ -1,0 +1,13 @@
+@import 'reset';
+@import 'breakpoint';
+
+$fontPrimary: "IBM Plex Sans"; 
+$font-family:
+    "Helvetica Neue",
+    $fontPrimary,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
