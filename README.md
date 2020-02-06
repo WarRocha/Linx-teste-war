@@ -13,7 +13,7 @@ Para rodar este projeto no Grunt, é necessário Node, npm, sass.
 Para iniciar o projeto basta dar o comando "Grunt" no terminal.   
 
 ```
-O link para acessar a pagina no serivodr http://localhost:9000/build/assets/html/site/index.html
+O link para acessar a pagina no servido http://localhost:9000/build/assets/html/site/index.html
 
 ```
 
