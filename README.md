@@ -20,12 +20,11 @@ O link para acessar a pagina no servido http://localhost:9000/build/assets/html/
 
 ## Realizado 
 
+
 - Landing page responsiva consumindo o json. 
 
-```
 - E-mail responsivo, testado nos principais plataformas de Webmail.
 
-```
 - Repositório criado no Github 
 
 ```
